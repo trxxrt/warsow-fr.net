@@ -5,8 +5,9 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^wsw_duel/', include('wsw_duel.foo.urls')),
+    (r'^user/', include('users.urls')),
+    (r'^$', 'views.home'),
+
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
