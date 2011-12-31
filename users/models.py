@@ -2,6 +2,13 @@ from django.db import models
 
 # utilisateurs
 
+class weapon(models.Model):
+    full_name = models.CharField('nom complet', max_length=50)
+    short_name = models.CharField('nom court', max_length=2)
+    icon_path = models.CharField('chemin vers l\'icone', max_length=200)
+    def __unicode__(self):
+        return self.choice
+
 class clan(models.Model):
     name = models.CharField('nom', max_length=50)
     email = models.CharField('email', max_length=200)
@@ -11,7 +18,6 @@ class clan(models.Model):
     password = models.CharField('mot de passe', max_length=200)
     def __unicode__(self):
         return self.choice
-
 
 class player(models.Model):
     name = models.CharField('nom', max_length=200)
